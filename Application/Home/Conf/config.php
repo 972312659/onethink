@@ -62,6 +62,7 @@ return array(
         '__IMG__'    => __ROOT__ . '/Public/' . MODULE_NAME . '/images',
         '__CSS__'    => __ROOT__ . '/Public/' . MODULE_NAME . '/css',
         '__JS__'     => __ROOT__ . '/Public/' . MODULE_NAME . '/js',
+        '__WECHAT__'     => __ROOT__ . '/Public/' . MODULE_NAME . '/wechat',
     ),
 
     /* SESSION 和 COOKIE 配置 */
@@ -95,4 +96,83 @@ return array(
         'callback' => false, //检测文件是否存在回调函数，如果存在返回文件信息数组
     ), //附件上传配置（文件上传类配置）
 
+    /*
+     * 微信接口配置
+     */
+    'wechat'=>[
+        /**
+         * Debug 模式，bool 值：true/false
+         *
+         * 当值为 false 时，所有的日志都不会记录
+         */
+        'debug'  => false,
+        /**
+         * 账号基本信息，请从微信公众平台/开放平台获取
+         */
+        'app_id'  => 'wx572ac2c67771545e',         // AppID
+        'secret'  => 'e4447d65f01ccc46d3cefaaa7a6531b9',     // AppSecret
+        'token'   => 'david',          // Token
+        'aes_key' => 'david',                    // EncodingAESKey，安全模式下请一定要填写！！！
+        /**
+         * 日志配置
+         *
+         * level: 日志级别, 可选为：
+         *         debug/info/notice/warning/error/critical/alert/emergency
+         * permission：日志文件权限(可选)，默认为null（若为null值,monolog会取0644）
+         * file：日志文件位置(绝对路径!!!)，要求可写权限
+         */
+        'log' => [
+            'level'      => 'debug',
+            'permission' => 0777,
+            'file'       => '/tmp/easywechat.log',
+        ],
+        /**
+         * OAuth 配置
+         *
+         * scopes：公众平台（snsapi_userinfo / snsapi_base），开放平台：snsapi_login
+         * callback：OAuth授权完成后的回调页地址
+         */
+        'oauth' => [
+            'scopes'   => ['snsapi_base'],
+            'callback' => '/wechat/callback',
+        ],
+        /**
+         * 微信支付
+         */
+        'payment' => [
+            'merchant_id'        => 'your-mch-id',
+            'key'                => 'key-for-signature',
+            'cert_path'          => 'path/to/your/cert.pem', // XXX: 绝对路径！！！！
+            'key_path'           => 'path/to/your/key',      // XXX: 绝对路径！！！！
+            // 'device_info'     => '013467007045764',
+            // 'sub_app_id'      => '',
+            // 'sub_merchant_id' => '',
+            // ...
+        ],
+        /**
+         * Guzzle 全局设置
+         *
+         * 更多请参考： http://docs.guzzlephp.org/en/latest/request-options.html
+         */
+        'guzzle' => [
+            'timeout' => 3.0, // 超时时间（秒）
+            //'verify' => false, // 关掉 SSL 认证（强烈不建议！！！）
+        ],
+    ],
+    /**
+     * 页面静态化
+     */
+    'HTML_CACHE_ON'     =>    true, // 开启静态缓存
+    'HTML_CACHE_TIME'   =>    60,   // 全局静态缓存有效期（秒）
+    'HTML_FILE_SUFFIX'  =>    '.html', // 设置静态缓存文件后缀
+    'HTML_CACHE_RULES'  =>     array(  // 定义静态缓存规则
+        // 定义格式1 数组方式
+        'Index:index'    =>     array('{:module}/{:controller}_{:action}', '60*60'),
+        // 定义格式2 字符串方式
+//        '静态地址'    =>     '静态规则',
+    ),
+
+    /* 后台错误页面模板 前台引用 */
+    'TMPL_ACTION_ERROR'     =>  MODULE_PATH.'View/Public/error.html', // 默认错误跳转对应的模板文件
+    'TMPL_ACTION_SUCCESS'   =>  MODULE_PATH.'View/Public/success.html', // 默认成功跳转对应的模板文件
 );

@@ -30,5 +30,18 @@ class FixModel extends Model
     protected $_auto=[
         ['inputtime', 'time', self::MODEL_BOTH, 'function'],
         ['status', 0, self::MODEL_INSERT, 'string'],
+        ['sn','getSn',1,'callback'],//调用本身模型的函数
     ];
+    /**
+     * 生成订单号
+     */
+    public function getSn()
+    {
+        $word='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        $sn='';
+        for($i=0;$i<=10;$i++){
+            $sn.=substr($word,rand(0,61),1);
+        }
+        return $sn;
+    }
 }

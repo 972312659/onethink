@@ -20,6 +20,21 @@ class FixController extends AdminController
      */
     public function index()
     {
+//        C('DB_NAME');
+//        $a=C('db_name');
+//        var_dump($a);
+        //I('变量类型.变量名',['默认值'],['过滤方法'])
+//        echo I('get.id').'<br/>';
+//        echo I('get.name',0).'<br/>';
+//        echo I('server.REQUEST_METHOD').'<br/>';
+//        echo I('param.1').'<br/>';
+//        echo I('id').'<br/>';
+        //D('[项目://][分组/]模型','模型层名称')
+//            var_dump(D('Admin/Category'));
+//            var_dump(D('AuthRule'));
+        //M('[基础模型名:]模型名','数据表前缀','数据库连接信息')
+//          var_dump(M('AuthRule'));
+//exit;
         $pid=I('get.pid',0);
         //获取频道
         $map  = array( 'pid'=>$pid);
@@ -28,7 +43,7 @@ class FixController extends AdminController
         //每页显示多少条数据
         $pageSize=1;
         $page=new Page($model->count(),$pageSize);
-        $fix=$model->where($map)->page($_GET['p'])->limit($pageSize)->order('id asc')->select();
+        $fix=$model->where($map)->limit($page->firstRow.','.$page->listRows)->order('id asc')->select();
         int_to_string($fix,array('status'=>array(1=>'已维修',0=>'未维修')));
         $this->assign('fix', $fix);
         $this->assign('pid', $pid);
@@ -60,7 +75,7 @@ class FixController extends AdminController
             $pid = I('get.pid', 0);
             //获取父导航
             if(!empty($pid)){
-                $parent = M('Channel')->where(array('id'=>$pid))->field('title')->find();
+                $parent = M('Fix')->where(array('id'=>$pid))->field('title')->find();
                 $this->assign('parent', $parent);
             }
 

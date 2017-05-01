@@ -1,0 +1,61 @@
+<extend name="base/base"/>
+
+<block name="content">
+    <div id="content">
+    <volist name="list" id="list">
+        <div class="row noticeList">
+            <a href="{:U('index/detail?id='.$list['id'])}">
+                <div class="col-xs-2">
+                    <img class="noticeImg" src="{$list.cover_id}" />
+                </div>
+                <div class="col-xs-10">
+                    <p class="title">{$list.title}</p>
+                    <p class="intro">{$list.description}</p>
+                    <p class="info">{$list.view}<span class="pull-right">{$list.create_time|date='Y-m-d',###}</span> </p>
+                </div>
+            </a>
+        </div>
+    </volist>
+    </div>
+    <div class="text-center">
+        <button class="btn-more btn-info">获取更多</button>
+    </div>
+</block>
+<block name="script">
+    <script>
+        var i=0;
+        var length=2;
+        $('.btn-more').click(function(){
+            i++;
+            if(i!=length){
+                $.post("{:U('Index/getmore')}",{page:i,category_id:40},function(data){
+                    length=data.length;
+                    $.each(data,function(n){
+                        if(n<data.length){
+                            var html='';
+                            var path = this.cover_id;
+                            html+='<div class="row noticeList">';
+                            html+='<a href="'+this.url+'">';
+                            html+='<div class="col-xs-2">';
+                            html+='<img class="noticeImg" src="'+path+'" />';
+                            html+='</div>';
+                            html+='<div class="col-xs-10">';
+                            html+='<p class="title">'+this.title+'</p>';
+                            html+='<p class="intro">'+this.description+'</p>';
+                            html+='<p class="info">'+this.view+'<span class="pull-right">'+this.create_time+'</span> </p>';
+                            html+='</div>';
+                            html+='</a>';
+                            html+='</div>';
+                            $(html).appendTo('#content');
+                        }
+                    });
+                },'json');
+            }else{
+                $('.btn-more').remove();
+                var html='<div id="footer-notice" class="text-center"><h4>已到底部</h4></div>';
+                $(html).appendTo('#content');
+            }
+
+        });
+    </script>
+</block>

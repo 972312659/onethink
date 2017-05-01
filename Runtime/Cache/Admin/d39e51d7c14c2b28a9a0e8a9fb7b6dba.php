@@ -86,7 +86,7 @@
 
             
 	<div class="main-title">
-		<h2>配置管理 [ <?php if(isset($_GET['group'])): ?><a href="<?php echo U('index');?>">全部</a><?php else: ?><strong>全部</strong><?php endif; ?>&nbsp;<?php if(is_array($group)): foreach($group as $key=>$vo): if(($group_id) != $key): ?><a href="<?php echo U('index?group='.$key);?>"><?php echo ($vo); ?></a><?php else: ?><strong><?php echo ($vo); ?></strong><?php endif; ?>&nbsp;<?php endforeach; endif; ?> ]</h2>
+		<h2>通知管理 [ <?php if(isset($_GET['group'])): ?><a href="<?php echo U('index');?>">全部</a><?php else: ?><strong>全部</strong><?php endif; ?>&nbsp;<?php if(is_array($group)): foreach($group as $key=>$vo): if(($group_id) != $key): ?><a href="<?php echo U('index?group='.$key);?>"><?php echo ($vo); ?></a><?php else: ?><strong><?php echo ($vo); ?></strong><?php endif; ?>&nbsp;<?php endforeach; endif; ?> ]</h2>
 	</div>
 
 	<div class="cf">
@@ -113,8 +113,9 @@
 					<th>ID</th>
 					<th>名称</th>
 					<th>标题</th>
-					<th>分组</th>
-					<th>类型</th>
+					<th>开始时间</th>
+					<th>结束时间</th>
+					<th>过期时间</th>
 					<th>操作</th>
 				</tr>
 			</thead>

@@ -1,0 +1,212 @@
+[ 2017-04-30T08:43:33+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000091s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003239s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0099s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0012s ]
+
+[ 2017-04-30T08:49:31+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004888s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005967s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006214s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0066s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2017-04-30T15:23:30+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/service/category_id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.031013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0316s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0016s ]
+
+[ 2017-04-30T15:23:40+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/service/category_id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002432s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `onethink_document` WHERE `category_id` = 40 LIMIT 1,1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `onethink_picture` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `onethink_picture` WHERE `status` = 1 AND `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `onethink_userdata` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `onethink_userdata` WHERE `uid` = null AND `type` = 40 AND `target_id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-04-30T15:23:43+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/service/category_id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002427s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0046s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `onethink_document` WHERE `category_id` = 40 LIMIT 2,1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `onethink_picture` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `onethink_picture` WHERE `status` = 1 AND `id` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `onethink_userdata` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `onethink_userdata` WHERE `uid` = null AND `type` = 40 AND `target_id` = 6 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-04-30T15:23:44+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/service/category_id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006761s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `onethink_document` WHERE `category_id` = 40 LIMIT 3,1   [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\server\www\onethink\Application\Home\Controller\IndexController.class.php 第 67 行.
+
+[ 2017-04-30T15:23:49+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/detail/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003817s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004843s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0043s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-04-30T15:23:49+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/addView.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003528s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001256s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0069s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.0079s ]
+SQL: UPDATE `onethink_document` SET `view`=view+1 WHERE `id` = 3 [ RunTime:0.0006s ]
+
+[ 2017-04-30T15:23:52+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/service/category_id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001303s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0051s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2017-04-30T15:23:54+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/service/category_id/43.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003780s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007562s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2017-04-30T15:24:02+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/join.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002250s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0035s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-04-30T15:24:05+08:00 ] 127.0.0.1 /index.php?s=/Home/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002415s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0038s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+
+[ 2017-04-30T15:24:05+08:00 ] 127.0.0.1 /index.php?s=/Home/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002809s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001497s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-04-30T15:24:14+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/service/category_id/43.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001893s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `onethink_document` WHERE `category_id` = 43 LIMIT 1,1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `onethink_picture` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `onethink_picture` WHERE `status` = 1 AND `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `onethink_userdata` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `onethink_userdata` WHERE `uid` = null AND `type` = 43 AND `target_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-04-30T15:24:15+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/detail/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002828s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001048s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0036s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-04-30T15:24:16+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/addView.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0044s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.0035s ]
+SQL: UPDATE `onethink_document` SET `view`=view+1 WHERE `id` = 9 [ RunTime:0.0003s ]
+
+[ 2017-04-30T15:24:20+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/service/category_id/43.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002792s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0049s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
