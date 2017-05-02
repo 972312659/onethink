@@ -134,7 +134,7 @@ return array(
          */
         'oauth' => [
             'scopes'   => ['snsapi_base'],
-            'callback' => '/wechat/callback',
+            'callback' => U('Wechat/callback','','',true),
         ],
         /**
          * 微信支付

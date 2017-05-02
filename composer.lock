@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "536e669124c93b29e4d985782922f8d4",
+    "content-hash": "386c61a01e58e23f5c561abc274cdafd",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -255,6 +255,50 @@
             "time": "2017-03-20T17:10:46+00:00"
         },
         {
+            "name": "hooklife/thinkphp5-wechat",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hooklife/thinkphp5-wechat.git",
+                "reference": "d820c9d2c76de45e4fd3ded10df00a525e13fe1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/hooklife/thinkphp5-wechat/d820c9d2c76de45e4fd3ded10df00a525e13fe1a.zip",
+                "reference": "d820c9d2c76de45e4fd3ded10df00a525e13fe1a",
+                "shasum": ""
+            },
+            "require": {
+                "overtrue/wechat": "~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hooklife\\ThinkphpWechat\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "hooklife",
+                    "email": "miaogaopeng123@gmail.com"
+                }
+            ],
+            "description": "微信 SDK for thinkphp5, 基于 overtrue/wechat",
+            "keywords": [
+                "thinkphp5",
+                "wechat",
+                "weixin"
+            ],
+            "time": "2017-01-12T08:27:27+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.22.1",
             "source": {
@@ -384,16 +428,16 @@
         },
         {
             "name": "overtrue/wechat",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "19170b9f27dbf3e9bf63db35750936b68c530c16"
+                "reference": "18f22de7a1d88d81a8e38ce03f23fa020369e8ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/overtrue/wechat/19170b9f27dbf3e9bf63db35750936b68c530c16.zip",
-                "reference": "19170b9f27dbf3e9bf63db35750936b68c530c16",
+                "url": "https://files.phpcomposer.com/files/overtrue/wechat/18f22de7a1d88d81a8e38ce03f23fa020369e8ed.zip",
+                "reference": "18f22de7a1d88d81a8e38ce03f23fa020369e8ed",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +482,7 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2017-04-16T02:32:50+00:00"
+            "time": "2017-04-27T04:10:13+00:00"
         },
         {
             "name": "pimple/pimple",

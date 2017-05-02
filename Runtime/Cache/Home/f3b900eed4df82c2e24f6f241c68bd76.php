@@ -123,6 +123,7 @@
             var id="<?php echo ($list["id"]); ?>";
             var category_id="<?php echo ($list["category_id"]); ?>";
             $.post("<?php echo U('join');?>",{id:id,category_id:category_id},function(data){
+                console.log(data.status);
                 //判断是否登录
                 if(!data.status){
                     //没有登录，是否跳转到登录页面
@@ -132,15 +133,15 @@
                 }else{
                     //登录状态
                     if(parseInt(data.info)){
-                        //取消报名成功
-                        alert('已取消报名');
-                        $html='<span class="glyphicon glyphicon-star-empty"></span>参加活动';
-                        $('.join').text($html);
-                    }else{
                         //报名成功
                         alert('报名成功');
                         $html='<span class="glyphicon glyphicon-star"></span>取消参加';
-                        $('.join').text($html);
+                        $('.join').html($html);
+                    }else{
+                        //取消报名成功
+                        alert('已取消报名');
+                        $html='<span class="glyphicon glyphicon-star-empty"></span>参加活动';
+                        $('.join').html($html);
                     }
                 }
             });

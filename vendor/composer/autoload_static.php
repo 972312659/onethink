@@ -12,6 +12,7 @@ class ComposerStaticInit30eb65699b5dab0d24e25dad34b2e0cc
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '9e090711773bfc38738f5dbaee5a7f14' => __DIR__ . '/..' . '/overtrue/wechat/src/Payment/helpers.php',
+        'b248b9358a8992876b21eddc15455b97' => __DIR__ . '/..' . '/hooklife/thinkphp5-wechat/src/helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -33,6 +34,10 @@ class ComposerStaticInit30eb65699b5dab0d24e25dad34b2e0cc
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'H' => 
+        array (
+            'Hooklife\\ThinkphpWechat\\' => 24,
         ),
         'G' => 
         array (
@@ -78,6 +83,10 @@ class ComposerStaticInit30eb65699b5dab0d24e25dad34b2e0cc
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Hooklife\\ThinkphpWechat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hooklife/thinkphp5-wechat/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

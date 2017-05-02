@@ -8,12 +8,15 @@
 
 namespace Home\Controller;
 
-
 use EasyWeChat\Foundation\Application;
 use EasyWeChat\Message\News;
+use EasyWeChat\Support\Url;
+use think\Controller;
 
-class WechatController extends HomeController
+include './vendor/autoload.php';//必须引入才能找到Application这个类
+class WechatController extends Controller
 {
+
     /**
      * 连接微信接口
      */
@@ -93,8 +96,137 @@ class WechatController extends HomeController
         $response = $server->serve();
         // 将响应输出
         $response->send(); // Laravel 里请使用：return $response;
+
+    }
+    //查询菜单
+    public function getMenus()
+    {
+        $app = new Application(C('wechat'));
+        $menu = $app->menu;
+        $menus = $menu->all();
+        var_dump($menus);
     }
 
+    //设置菜单
+    public function setMenus()
+    {
+        $app = new Application(C('wechat'));
+        $menu = $app->menu;
+        $buttons = [
+            [
+                "type" => "click",
+                "name" => "热卖商品",
+                "key"  => "hot_goods"
+            ],
+            [
+                "name"       => "个人中心",
+                "sub_button" => [
+                    [
+                        "type" => "view",
+                        "name" => "我的信息",
+                        "url"  => U('Wechat/service','','',true),
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "我的订单",
+                        "url"  => U('Wechat/service','','',true),
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "绑定账号",
+                        "url"  => U('Wechat/service','','',true),
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "test",
+                        "url"  => U('Wechat/test','','',true),
+                    ],
+                ],
+            ],
+        ];
+        $r = $menu->add($buttons);
+        var_dump($r);
+    }
+    /**
+     *
+     */
+    public function service()
+    {
+        if(!is_login()){
+            $this->redirect(U('Wechat/bang'));exit;
+        }
+        //获取openid
+        if(!session('openid')){
+            $app=new Application(C('wechat'));
+            //将当前路由保存到session，便于授权回调地址跳回当前页面
+            session('target_url',U('service'));
+            $response = $app->oauth->redirect();
+            $response->send();
+        }
+        //从session中取出openid
+        $openid=session('openid');
+        //用户是否绑定
+        $member=M('Ucenter_member')->where(['openid'=>$openid])->select();
+        if($member==null){
+            //将当前路由保存到session，便于授权回调地址跳回当前页面
+            session('target_url',U('service'));
+            $this->redirect(U('bang'));
+        }
+
+    }
+    /**
+     * 用户绑定
+     */
+    public function bang()
+    {
+        var_dump(11);exit;
+        //获取openid
+        if(!session('openid')){
+            $app=new Application(C('wechat'));
+            $response = $app->oauth->redirect();
+            //将当前路由保存到session，便于授权回调地址跳回当前页面
+            session('target_url',U('bang'));
+            $response->send();
+        }
+        //从session中取出openid
+        $openid=session('openid');
+        //用户是否绑定
+        $member=M('Ucenter_member')->find(['openid'=>$openid]);
+        //用户已绑定，就自动登录
+        if($member){
+            //将当前路由保存到session，便于授权回调地址跳回当前页面
+            $Member = D('Member');
+            $Member->login($member['id']);
+            $target_url=session('target_url',U('bang'));
+            session('target_url',null);
+            $this->redirect($target_url);exit;
+        }
+        if(IS_POST){
+
+        }
+        $this->assign();
+    }
+
+
+    /**
+     * 回调 获取openid
+     */
+    public function callback()
+    {
+        $app = new Application(C('wechat'));
+        $oauth = $app->oauth;
+        // 获取 OAuth 授权结果用户信息
+        $user = $oauth->user();
+        //得到openId
+        $openId=$user->id;
+        //将openId保存到session
+        session('openId',$openId);
+        if(session('?target_url')){
+            $target_url=session('target_url');
+            session('target_url',null);//清空target_url
+            $this->redirect($target_url);exit;
+        }
+    }
     /**
      * 发送文字取消绑定
      */
@@ -114,22 +246,10 @@ class WechatController extends HomeController
         }
         return '未绑定';
     }
-    /**
-     * callback  获取openid
-     */
-    public function actionCallback()
+    public function test()
     {
-        $app = new Application(C('wechat'));
-        $user = $app->oauth->user();
-        //得到openId
-        $openId=$user->id;
-        //将openId保存到session
-        session('openId',$openId);
-        //跳转到刚才的页面
-        if(session('?target_url')){
-            $target_url=session('target_url');
-            session('target_url',null);//清空target_url
-            return $this->redirect($target_url);
-        }
+        var_dump(C('wechat'));
+        echo 111;
     }
+
 }

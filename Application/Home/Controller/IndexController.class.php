@@ -120,7 +120,7 @@ class IndexController extends HomeController
         $list = M('Document')->where($map)->select();
         $list = $list[0];
         $list['join']=0;
-        if(!session('uid')){
+        if(!is_login()){
             $map=['uid'=>session('uid'),'type'=>$list['category_id'],'target_id'=>$list['id']];
             $list['join']=(M('Userdata')->where($map)->find()==null?0:1);
         }
@@ -133,19 +133,19 @@ class IndexController extends HomeController
     public function join()
     {
         //判断是否登录，没有登录则返回错误信息
-        if(!session('uid')){
+        $uid=is_login();
+        if(!$uid){
             $this->error("没有登录");
         }
         //已登录，则完成报名
-        $uid=session('uid');
         $id=I('post.id');
         $category_id=I('post.category_id');
         $model=M('Userdata');
         $map=['uid'=>$uid,'type'=>$category_id,'target_id'=>$id];
         $result=$model->where($map)->find();
         //已经报名
-        if($result!=null){
-            $model->delete($map);
+        if($result){
+            $model->where($map)->delete();
             $this->success('0');
         }
         $model->create($map);

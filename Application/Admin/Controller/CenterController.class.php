@@ -41,4 +41,7 @@ class CenterController extends AdminController
         $this->display();
 //        var_dump($list);
     }
+    /**
+     *
+     */
 }
