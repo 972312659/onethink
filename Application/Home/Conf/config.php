@@ -134,7 +134,7 @@ return array(
          */
         'oauth' => [
             'scopes'   => ['snsapi_base'],
-            'callback' => U('Wechat/callback','','',true),
+            'callback' => '/Home/Wechat/callback',
         ],
         /**
          * 微信支付
@@ -173,6 +173,6 @@ return array(
     ),
 
     /* 后台错误页面模板 前台引用 */
-    'TMPL_ACTION_ERROR'     =>  MODULE_PATH.'View/Public/error.html', // 默认错误跳转对应的模板文件
-    'TMPL_ACTION_SUCCESS'   =>  MODULE_PATH.'View/Public/success.html', // 默认成功跳转对应的模板文件
+    'TMPL_ACTION_ERROR'     =>  MODULE_PATH.'View/default/Public/error.html', // 默认错误跳转对应的模板文件
+    'TMPL_ACTION_SUCCESS'   =>  MODULE_PATH.'View/default/Public/success.html', // 默认成功跳转对应的模板文件
 );

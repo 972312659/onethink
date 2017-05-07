@@ -1,0 +1,69 @@
+<extend name="base/base"/>
+
+<block name="content">
+    <div id="content">
+        <volist name="list" id="list">
+            <div class="row noticeList">
+                <a href="{$list.url}">
+                    <div class="col-xs-2">
+                        <img class="noticeImg" src="{$list.img}" />
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="title">{$list.title}</p>
+                        <p class="intro">{$list.description}</p>
+                        <p class="info">{$list.view}<span class="pull-right">{$list.create_time}</span> </p>
+                        <if condition="$list.category_id eq 43">
+                            <a href="javascript:;" class="join">
+                                <if condition="$list.join eq 0">
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    参加活动
+                                    <else/>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    取消参加
+                                </if>
+                            </a>
+                        </if>
+                    </div>
+                </a>
+            </div>
+        </volist>
+    </div>
+    <div class="text-center">
+        <button class="btn-more btn-info">获取更多</button>
+    </div>
+</block>
+<block name="script">
+    <script>
+        var p=1;
+        $('.btn-more').click(function(){
+            $.post("{:U('allnotice')}",{p:p+1},function(data){
+                console.debug(data.info);
+                p++;
+                if(data.status==1){
+                    $(data.info).each(function(i,val){
+                        var html='';
+                        html+='<div class="row noticeList">';
+                        html+='<a href="'+val.url+'">';
+                        html+='<div class="col-xs-2">';
+                        html+='<img class="noticeImg" src="'+val.img+'" />';
+                        html+='</div>';
+                        html+='<div class="col-xs-10">';
+                        html+='<p class="title">'+val.title+'</p>';
+                        html+='<p class="intro">'+val.description+'</p>';
+                        html+='<p class="info">'+val.view+'<span class="pull-right">'+val.create_time+'</span> </p>';
+                        html+='</div>';
+                        html+='</a>';
+                        html+='</div>';
+                        $(html).appendTo('#content');
+                    });
+                }else{
+                    $('.btn-more').remove();
+                    var html='<div id="footer-notice" class="text-center"><h4>已到底部</h4></div>';
+                    $(html).appendTo('#content');
+                }
+            },'json');
+
+        });
+
+    </script>
+</block>

@@ -16,11 +16,11 @@ namespace Admin\Controller;
 class AddonsController extends AdminController {
 
     public function _initialize(){
-        $this->assign('_extra_menu',array(
-            '已装插件后台'=> D('Addons')->getAdminList(),
-        ));
-        parent::_initialize();
-    }
+    $this->assign('_extra_menu',array(
+        '已装插件后台'=> D('Addons')->getAdminList(),
+    ));
+    parent::_initialize();
+}
 
     //创建向导首页
     public function create(){

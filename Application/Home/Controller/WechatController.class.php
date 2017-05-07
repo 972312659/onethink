@@ -11,11 +11,16 @@ namespace Home\Controller;
 use EasyWeChat\Foundation\Application;
 use EasyWeChat\Message\News;
 use EasyWeChat\Support\Url;
-use think\Controller;
+use Think\Controller;
+use User\Api\UserApi;
 
-include './vendor/autoload.php';//必须引入才能找到Application这个类
 class WechatController extends Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        require './vendor/autoload.php';//必须引入才能找到Application这个类
+    }
 
     /**
      * 连接微信接口
@@ -153,15 +158,8 @@ class WechatController extends Controller
     public function service()
     {
         if(!is_login()){
-            $this->redirect(U('Wechat/bang'));exit;
-        }
-        //获取openid
-        if(!session('openid')){
-            $app=new Application(C('wechat'));
-            //将当前路由保存到session，便于授权回调地址跳回当前页面
-            session('target_url',U('service'));
-            $response = $app->oauth->redirect();
-            $response->send();
+            session('target_url','Wechat/service');
+            $this->redirect('Wechat/bang');exit;
         }
         //从session中取出openid
         $openid=session('openid');
@@ -169,9 +167,10 @@ class WechatController extends Controller
         $member=M('Ucenter_member')->where(['openid'=>$openid])->select();
         if($member==null){
             //将当前路由保存到session，便于授权回调地址跳回当前页面
-            session('target_url',U('service'));
-            $this->redirect(U('bang'));
+            session('target_url','Wechat/service');
+            $this->redirect('Wechat/bang');
         }
+        $this->display();
 
     }
     /**
@@ -179,32 +178,55 @@ class WechatController extends Controller
      */
     public function bang()
     {
-        var_dump(11);exit;
         //获取openid
         if(!session('openid')){
             $app=new Application(C('wechat'));
             $response = $app->oauth->redirect();
-            //将当前路由保存到session，便于授权回调地址跳回当前页面
-            session('target_url',U('bang'));
             $response->send();
         }
         //从session中取出openid
         $openid=session('openid');
         //用户是否绑定
-        $member=M('Ucenter_member')->find(['openid'=>$openid]);
+        $member=M('Ucenter_member')->where(['openid'=>$openid])->find();
         //用户已绑定，就自动登录
         if($member){
             //将当前路由保存到session，便于授权回调地址跳回当前页面
             $Member = D('Member');
             $Member->login($member['id']);
-            $target_url=session('target_url',U('bang'));
+            $target_url=session('target_url');
             session('target_url',null);
             $this->redirect($target_url);exit;
         }
-        if(IS_POST){
+        if(IS_POST){ //登录验证
+            /* 调用UC登录接口登录 */
+            $user = new UserApi();
+            $uid = $user->login(I('post.username'), I('post.password'));
+            if(0 < $uid){ //UC登录成功
+                /* 登录用户 */
+                $Member = D('Member');
+                if($Member->login($uid)){ //登录用户
+                    //将openid绑定到用户
+                    $model=M('Ucenter_member');
+                    $model->where(['id'=>$uid])->setField(['openid'=>$openid]);
+                    //TODO:跳转到之前的页面
+                    $target_url=session('target_url');
+                    session('target_url',null);
+                    $this->success('登录成功！',$target_url);
+                } else {
+                    $this->error($Member->getError());
+                }
+
+            } else { //登录失败
+                switch($uid) {
+                    case -1: $error = '用户不存在或被禁用！'; break; //系统级别禁用
+                    case -2: $error = '密码错误！'; break;
+                    default: $error = '未知错误！'; break; // 0-接口参数错误（调试阶段使用）
+                }
+                $this->error($error);
+            }
 
         }
-        $this->assign();
+        $this->display();
     }
 
 
@@ -218,13 +240,11 @@ class WechatController extends Controller
         // 获取 OAuth 授权结果用户信息
         $user = $oauth->user();
         //得到openId
-        $openId=$user->id;
+        $openid=$user->id;
         //将openId保存到session
-        session('openId',$openId);
+        session('openid',$openid);
         if(session('?target_url')){
-            $target_url=session('target_url');
-            session('target_url',null);//清空target_url
-            $this->redirect($target_url);exit;
+            $this->redirect('Wechat/bang');exit;
         }
     }
     /**
@@ -248,8 +268,32 @@ class WechatController extends Controller
     }
     public function test()
     {
-        var_dump(C('wechat'));
-        echo 111;
+        if(IS_POST){
+            /* 调用UC登录接口登录 */
+            $user = new UserApi();
+            $uid = $user->login(I('post.username'), I('post.password'));
+            if(0 < $uid){ //UC登录成功
+                /* 登录用户 */
+                $Member = D('Member');
+                if($Member->login($uid)){ //登录用户
+                    var_dump($Member->login($uid));exit;
+                    //TODO:跳转到登录前页面
+                    $this->success('登录成功！',U('Home/Index/index'));
+                } else {
+                    $this->error($Member->getError());
+                }
+
+            } else { //登录失败
+                switch($uid) {
+                    case -1: $error = '用户不存在或被禁用！'; break; //系统级别禁用
+                    case -2: $error = '密码错误！'; break;
+                    default: $error = '未知错误！'; break; // 0-接口参数错误（调试阶段使用）
+                }
+                $this->error($error);
+            }
+        }
+        $this->display('bang');
     }
+
 
 }

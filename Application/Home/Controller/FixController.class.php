@@ -9,7 +9,7 @@
 namespace Home\Controller;
 
 
-class FixController extends HomeController
+class FixController extends LoginController
 {
     /**
      * 添加报修单
@@ -20,19 +20,28 @@ class FixController extends HomeController
             $fix = D('Admin/Fix');
             $data = $fix->create();
             if($data){
-                $id = $fix->add();
+                $uid=is_login();
+                $proprietor=M('Proprietor')->where(['uid'=>$uid])->find();
+                $data['address']=$proprietor['room_number'];
+                $data['uid']=$uid;
+                $id = $fix->data($data)->add();
                 if($id){
-                    $this->success('新增成功', U('index'));
+                    $this->success('新增成功', U('Index/index'),2);
                     //记录行为
                     action_log('update_fix', 'fix', $id, UID);
                 } else {
-                    $this->error('新增失败');
+                    $this->error('新增失败', U('index'),2);
                 }
             } else {
                 $this->error($fix->getError());
             }
         } else {
-            if(is_login()){//判断是否登录
+            if($uid=is_login()){//判断是否登录
+                $result=M('Proprietor')->where(['uid'=>$uid])->find();
+                //判断是否认证
+                if(!$result){
+                    $this->redirect('Proprietor/add');exit;
+                }
                 $pid = I('get.pid', 0);
                 //获取父导航
                 if(!empty($pid)){

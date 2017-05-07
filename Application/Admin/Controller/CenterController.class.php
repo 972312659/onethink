@@ -42,6 +42,11 @@ class CenterController extends AdminController
 //        var_dump($list);
     }
     /**
-     *
+     *关于我们
      */
+    public function about()
+    {
+
+    }
+
 }

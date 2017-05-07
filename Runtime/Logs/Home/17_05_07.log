@@ -1,0 +1,635 @@
+[ 2017-05-07T09:21:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004862s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003901s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0092s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0009s ]
+
+[ 2017-05-07T09:29:10+08:00 ] 127.0.0.1 /index.php?s=/Home/My/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002355s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002984s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2017-05-07T09:29:10+08:00 ] 127.0.0.1 /index.php?s=/Home/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001607s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0035s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2017-05-07T09:29:10+08:00 ] 127.0.0.1 /index.php?s=/Home/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001026s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0056s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+
+[ 2017-05-07T09:29:19+08:00 ] 127.0.0.1 /index.php?s=/Home/User/verify.html&random=0.027031555270701668
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001625s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2017-05-07T09:29:20+08:00 ] 127.0.0.1 /index.php?s=/Home/User/verify.html&random=0.37430517743042535
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001621s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0035s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-05-07T09:29:25+08:00 ] 127.0.0.1 /index.php?s=/Home/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002393s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0036s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: lite C:\server\www\onethink\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.0049s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `onethink_member` WHERE `uid` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `onethink_member` SET `login`=`login`+1,`last_login_time`='1494120565',`last_login_ip`='2130706433' WHERE `uid` = 2 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `onethink_action` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `onethink_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.0049s ]
+SQL: INSERT INTO `onethink_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','2','2130706433','member','2','1494120565','11在2017-05-07 09:29登录了后台') [ RunTime:0.0008s ]
+SQL: SELECT * FROM `onethink_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined offset: 1 C:\server\www\onethink\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\server\www\onethink\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` WHERE `action_id` = 1 AND `user_id` = 2 AND `create_time` > 1494034165 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.0032s ]
+SQL: UPDATE `onethink_member` SET `score`=score+10 WHERE ( uid=2 AND status>-1 ) [ RunTime:0.0004s ]
+
+[ 2017-05-07T09:29:25+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001911s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001654s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0036s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-05-07T09:29:27+08:00 ] 127.0.0.1 /index.php?s=/Home/My/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001900s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0046s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-05-07T09:29:27+08:00 ] 127.0.0.1 /index.php?s=/Home/My/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000141s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002793s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0045s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2017-05-07T09:29:29+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002232s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002918s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0033s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+10 WHERE `id` = 2 [ RunTime:0.0003s ]
+
+[ 2017-05-07T09:29:33+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001590s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0052s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:29:42+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001752s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0046s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:32:38+08:00 ] 127.0.0.1 /index.php?s=/Home/My/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001628s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2017-05-07T09:37:48+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002306s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002926s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0052s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:38:52+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001588s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0087s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:38:53+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001852s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0046s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:38:54+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001724s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0044s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:45:55+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002144s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002987s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001087s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0079s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:45:59+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001885s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0065s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0071s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+0 WHERE `id` = 2 [ RunTime:0.0003s ]
+INFO: id为2于20170507签到
+
+[ 2017-05-07T09:58:23+08:00 ] 127.0.0.1 /index.php?s=/Home/My/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002637s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0089s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-05-07T09:58:23+08:00 ] 127.0.0.1 /index.php?s=/Home/My/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001735s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0078s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2017-05-07T09:58:24+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001914s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0083s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:58:27+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001616s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0075s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0068s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+15 WHERE `id` = 2 [ RunTime:0.0005s ]
+INFO: id为2于20170507签到
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0067s ]
+
+[ 2017-05-07T09:58:56+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002181s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0076s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:59:00+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001602s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0071s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0079s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+9 WHERE `id` = 2 [ RunTime:0.0004s ]
+INFO: id为2于20170507签到
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0066s ]
+
+[ 2017-05-07T09:59:45+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002181s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001240s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0086s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T09:59:50+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001709s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0092s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0070s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+9 WHERE `id` = 2 [ RunTime:0.0004s ]
+INFO: id为2于20170507签到
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0066s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\server\www\onethink\Application\Home\Controller\MyController.class.php:95) C:\server\www\onethink\ThinkPHP\Library\Think\Controller.class.php 第 215 行.
+
+[ 2017-05-07T09:59:54+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002639s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0079s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T10:00:10+08:00 ] 127.0.0.1 /index.php?s=/Home/My/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0117s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-05-07T10:00:10+08:00 ] 127.0.0.1 /index.php?s=/Home/My/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002677s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001269s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0124s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-05-07T10:00:13+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002640s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0085s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0099s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+0 WHERE `id` = 2 [ RunTime:0.0003s ]
+INFO: id为2于20170507签到
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0078s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\server\www\onethink\Application\Home\Controller\MyController.class.php:95) C:\server\www\onethink\ThinkPHP\Library\Think\Controller.class.php 第 215 行.
+
+[ 2017-05-07T10:01:26+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002444s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0087s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T10:02:00+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003937s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0078s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0066s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+16 WHERE `id` = 2 [ RunTime:0.0004s ]
+INFO: id为2于20170507签到
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0063s ]
+
+[ 2017-05-07T10:02:57+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001593s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0089s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T10:03:02+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001884s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0077s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0068s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+17 WHERE `id` = 2 [ RunTime:0.0004s ]
+INFO: id为2于20170507签到
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0127s ]
+
+[ 2017-05-07T10:04:36+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005493s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0083s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T10:04:45+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001614s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0064s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0069s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+1 WHERE `id` = 2 [ RunTime:0.0004s ]
+INFO: id为2于20170507签到
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0069s ]
+
+[ 2017-05-07T10:06:05+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001606s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0086s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T10:06:08+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001888s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0075s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0073s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+4 WHERE `id` = 2 [ RunTime:0.0005s ]
+INFO: id为2于20170507签到
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0068s ]
+
+[ 2017-05-07T10:10:50+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002229s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002862s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0077s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+
+[ 2017-05-07T10:10:54+08:00 ] 127.0.0.1 /index.php?s=/Home/My/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001251s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0095s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: persistent C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 41 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 43 行.
+NOTIC: [8] Undefined index: timeout C:\server\www\onethink\ThinkPHP\Library\Think\Cache\Driver\Redis.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `onethink_ucenter_member` [ RunTime:0.0069s ]
+SQL: UPDATE `onethink_ucenter_member` SET `score`=score+7 WHERE `id` = 2 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `onethink_user_sing_in` [ RunTime:0.0044s ]
+SQL: INSERT INTO `onethink_user_sing_in` (`uid`,`get_score`,`sing_intime`) VALUES ('2','7','1494123054') [ RunTime:0.0073s ]
+
+[ 2017-05-07T10:16:32+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/ourservice.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001712s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0085s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2017-05-07T10:16:34+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001892s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0081s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2017-05-07T10:16:34+08:00 ] 127.0.0.1 /index.php?s=/Home/Index/addView.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001698s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `onethink_config` [ RunTime:0.0076s ]
+SQL: SELECT `type`,`name`,`value` FROM `onethink_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.0084s ]
+SQL: UPDATE `onethink_document` SET `view`=view+1 WHERE `id` = 11 [ RunTime:0.0005s ]
+

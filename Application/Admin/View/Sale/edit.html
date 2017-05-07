@@ -1,0 +1,129 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<script type="text/javascript" src="__STATIC__/uploadify/jquery.uploadify.min.js"></script>
+	<div class="main-title">
+		<h2>
+			{$info['id']?'编辑':'新增'}租售
+			<notempty name="pid">
+				[&nbsp;父导航：<a href="{:U('index','pid='.$pid)}">{$parent.title}</a>&nbsp;]
+			</notempty>
+		</h2>
+	</div>
+	<form action="{:U()}" method="post" class="form-horizontal" enctype="multipart/form-data">
+		<input type="hidden" name="pid" value="{$pid}">
+		<div class="form-item">
+			<label class="item-label">发布人<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="name" value="{$info.name|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">标题<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="title" value="{$info.title|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">简介<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="title_detail" value="{$info.title_detail|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">价格<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="price" value="{$info.price|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">选择租售<span class="check-tips"></span></label>
+			<div class="controls">
+				<select class="form-control" name="relation">
+					<if condition="$info.status eq 1">
+					<option value="1" selected>出租</option>
+					<option value="2">出售</option>
+					<elseif condition="$info.status eq 2">
+						<option value="1">出租</option>
+						<option value="2"  selected>出售</option>
+					<else/>
+						<option value="1" selected>出租</option>
+						<option value="2">出售</option>
+					</if>
+				</select>
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">联系电话<span class="check-tips">（手机）</span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="tel" value="{$info.tel|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">详情<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="detail" value="{$info.detail|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">图片<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="file" id="upload_picture_{$field.name}">
+				<input type="hidden" name="cover_id" id="cover_id_{$field.name}"/>
+				<div class="upload-img-box">
+					<notempty name="data[$field['name']]">
+						<div class="upload-pre-item"><img src="{$data[$field['name']]|get_cover='path'}"/></div>
+					</notempty>
+				</div>
+			</div>
+			<notempty name="$info['cover_id']">
+				<img src="{:get_cover($info['cover_id'],'path')}" height="200px"/>
+			</notempty>
+		</div>
+
+		<div class="form-item">
+			<input type="hidden" name="id" value="{$info.id|default=''}">
+			<button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+			<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+		</div>
+	</form>
+</block>
+<block name="script">
+<script type="text/javascript" charset="utf-8">
+	//导航高亮
+	highlight_subnav('{:U('index')}');
+	//上传图片
+	/* 初始化上传插件 */
+	$("#upload_picture_{$field.name}").uploadify({
+		"height"          : 30,
+		"swf"             : "__STATIC__/uploadify/uploadify.swf",
+		"fileObjName"     : "download",
+		"buttonText"      : "上传图片",
+		"uploader"        : "{:U('File/uploadPicture',array('session_id'=>session_id()))}",
+		"width"           : 120,
+		'removeTimeout'	  : 1,
+		'fileTypeExts'	  : '*.jpg; *.png; *.gif;',
+		"onUploadSuccess" : uploadPicture{$field.name},
+	'onFallback' : function() {
+		alert('未检测到兼容版本的Flash.');
+	}
+	});
+	function uploadPicture{$field.name}(file, data){
+		var data = $.parseJSON(data);
+		var src = '';
+		if(data.status){
+			$("#cover_id_{$field.name}").val(data.id);
+			src = data.url || '__ROOT__' + data.path
+			$("#cover_id_{$field.name}").parent().find('.upload-img-box').html(
+					'<div class="upload-pre-item"><img src="' + src + '"/></div>'
+			);
+		} else {
+			updateAlert(data.info);
+			setTimeout(function(){
+				$('#top-alert').find('button').click();
+				$(that).removeClass('disabled').prop('disabled',false);
+			},1500);
+		}
+	}
+</script>
+</block>

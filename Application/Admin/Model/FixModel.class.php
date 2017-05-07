@@ -17,7 +17,6 @@ class FixModel extends Model
      * 自动验证规则
      */
     protected $_validate=[
-        ['address', 'require', '地址不能为空', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH],
         ['question', 'require', '问题不能为空', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH],
         ['name', 'require', '姓名不能为空', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH],
         ['relation', 'require', '关系不能为空', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH],

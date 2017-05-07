@@ -49,6 +49,39 @@ class IndexController extends HomeController
         $this->display();
 
     }
+    /**
+     * 显示生活小贴士
+     */
+    public function allnotice()
+    {
+        $model=M('Document')->where('category_id=40 OR category_id=41 OR category_id=42');
+//        $pageSize=C('LIST_ROWS');//默认每页显示条数
+        $pageSize=1;
+        $list = $model->page(I('p',1), $pageSize)->select();
+        //给数据正确的格式
+        foreach ($list as &$v) {
+            $v['url']=U('detail',['id'=>$v['id']]);//url地址
+            $v['create_time']=date('Y-m-d H:i:s',$v['create_time']);//时间格式化
+            $v['img'] = get_cover($v['cover_id'],'path');//给图片路径
+            $v['join']=0;
+            if(!session('uid')){
+                $map=['uid'=>session('uid'),'type'=>$v['category_id'],'target_id'=>$v['id']];
+                $v['join']=(M('Userdata')->where($map)->find()==null?0:1);
+            }
+        }
+        //发送ajax请求
+        if(IS_AJAX){
+            if(empty($list)){//没有数据，返回info信息和status=0
+                $this->error('没有数据');
+            }else{//有数据，返回info数据和status=1
+                $this->success($list);
+            }
+        }
+        //发送数据到页面,显示页面
+        $this->assign('list', $list);
+        $this->display();
+
+    }
 
     /**
      * 显示所有文章列表
@@ -162,4 +195,28 @@ class IndexController extends HomeController
         $model->where(['id'=>$id])->setInc('view');
         $this->success();
     }
+    /**
+     * 显示服务页面
+     */
+    public function ourservice()
+    {
+        $this->display();
+    }
+    /**
+     * 关于我们
+     */
+    public function about()
+    {
+        $map=['category_id' => 44];
+        $list = M('Document')->where($map)->select();
+        $list = $list[0];
+        $list['join']=0;
+        if(!is_login()){
+            $map=['uid'=>session('uid'),'type'=>$list['category_id'],'target_id'=>$list['id']];
+            $list['join']=(M('Userdata')->where($map)->find()==null?0:1);
+        }
+        $this->assign('list', $list);
+        $this->display();
+    }
+
 }

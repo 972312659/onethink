@@ -1,6 +1,5 @@
 {
     "require": {
-        "overtrue/wechat": "^3.3",
-        "hooklife/thinkphp5-wechat": "^1.1"
+        "overtrue/wechat": "^3.3"
     }
 }

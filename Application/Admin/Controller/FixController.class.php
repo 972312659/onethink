@@ -96,7 +96,7 @@ class FixController extends AdminController
             if($data){
                 if($fix->save()){
                     //记录行为
-                    action_log('update_channel', 'channel', $data['id'], UID);
+                    action_log('update_fix', 'fix', $data['id'], UID);
                     $this->success('编辑成功', U('index'));
                 } else {
                     $this->error('编辑失败');

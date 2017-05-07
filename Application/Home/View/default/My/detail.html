@@ -1,0 +1,62 @@
+<extend name="base/base"/>
+<block name="content">
+    <div class="blank"></div>
+    <h3 class="noticeDetailTitle"><strong>{$title}</strong></h3>
+    <div class="noticeDetailInfo">
+        报修时间：{$inputtime|date='Y-m-d',###}
+    </div>
+
+    <div class="noticeDetailContent">
+        {$question}
+    </div>
+    <div class="text-center">
+        <div class="content">
+        <if condition="$status eq 0">
+                <a class="btn btn-info assess" status="0">已处理</a>
+            <elseif condition="$status eq 1"/>
+                <textarea id="content" name="assess" class="form-control" rows="3" placeholder="输入评论"></textarea>
+                <p><a class="btn btn-success assess" status="1">提交</a></p>
+            <else/>
+                评论：{$assess}
+        </if>
+        </div>
+    </div>
+</block>
+<block name="script">
+    <script>
+        $('.assess').click(function(){
+            var status = $(this).attr('status');
+            var id="{$id}";
+            var data={};
+            var assess='';
+            var s=0;
+            if(status==1){
+                assess=$('#content').val();
+                s=1;
+            }
+            console.log(s);
+            data={s:s,assess:assess,id:id};
+            $.post("{:U('detail')}",data,function(data){
+                var html = '';
+                if(data.status){
+                    html = '评论：'+assess;
+                    $('.content').html(html);
+                }else{
+                    html = '<textarea id="content" name="assess" class="form-control" rows="3" placeholder="输入评论"></textarea>\
+                            <p><a class="btn btn-success assess" status="1">提交</a></p><h1>M</h1>';
+                    $('.assess').remove();
+                    $(html).appendTo('.content');
+                    $('.assess').click(function(){
+                        assess=$('#content').val();
+                        s=1;
+                        data={s:s,assess:assess,id:id};
+                        $.post("{:U('detail')}",data,function(data){
+                            html = '评论：'+assess;
+                            $('.content').html(html);
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+</block>

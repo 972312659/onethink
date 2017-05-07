@@ -1,0 +1,18 @@
+<extend name="Base/base"/>
+<block name="content">
+    <div class="container-fluid">
+        <div class="blank"></div>
+        <h3 class="noticeDetailTitle"><strong>{$list.title}</strong></h3>
+        <div class="noticeDetailInfo">发布者:{$list.name}</div>
+        <div class="noticeDetailInfo">发布时间：{$list.create_time}</div>
+        <div class="noticeDetailInfo">联系电话：{$list.tel}</div>
+        <if condition="$list.status eq 1">
+            <h4 class="text-danger">价格:{$list.price}元/月</h4>
+        <else/>
+            <h4 class="text-danger">价格:{$list.price}元</h4>
+        </if>
+        <div class="noticeDetailContent">
+            <img src="{$list.img}" />
+        </div>
+    </div>
+</block>
